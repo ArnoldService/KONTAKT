@@ -59,17 +59,6 @@
       text-decoration: underline;
     }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const lang = navigator.language.slice(0, 2);
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
-      });
-      if (!document.querySelector('[data-lang="' + lang + '"]')) {
-        document.querySelector('[data-lang="de"]').style.display = 'block';
-      }
-    });
-  </script>
 </head>
 <body>
   <div class="container">
@@ -77,22 +66,20 @@
       <img src="logo-2.png" alt="Arnold Service Logo">
     </div>
     <div class="hero">
-      <img src="recruitment_image_with_logo.png" alt="Wir brauchen dich!">
-      <img src="recruitment_person_arnold_logo.png" alt="Arnold Mitarbeiter zeigt nach vorne">
+      <img src="recruitment_woman_arnold.png" alt="Frau mit ARNOLD-Shirt">
+      <img src="recruitment_man_arnold.jpg" alt="Mann mit ARNOLD-Shirt">
     </div>
 
-    <div data-lang="de">
-      <h1>Bewirb dich jetzt bei uns!</h1>
-      <p>Wir freuen uns, dass du Teil unseres Teams werden möchtest!</p>
-      <ul>
-        <li>ein starkes, eingespieltes Team</li>
-        <li>faire Bedingungen und ehrliche Kommunikation</li>
-        <li>abwechslungsreiche Aufgaben im Bereich Gebäudedienstleistungen</li>
-      </ul>
-      <p><strong>Wir suchen Menschen, die mit anpacken und mit uns wachsen wollen.</strong></p>
-      <p>📞 <a href="tel:022197581888">0221 975 818 88</a></p>
-      <p>📧 <span class="email">personal@service-arnold.de</span></p>
-    </div>
+    <h1>Bewirb dich jetzt bei uns!</h1>
+    <p>Wir freuen uns, dass du Teil unseres Teams werden möchtest!</p>
+    <ul>
+      <li>ein starkes, eingespieltes Team</li>
+      <li>faire Bedingungen und ehrliche Kommunikation</li>
+      <li>abwechslungsreiche Aufgaben im Bereich Gebäudedienstleistungen</li>
+    </ul>
+    <p><strong>Wir suchen Menschen, die mit anpacken und mit uns wachsen wollen.</strong></p>
+    <p>📞 <a href="tel:022197581888">0221 975 818 88</a></p>
+    <p>📧 <a class="email" href="mailto:personal@service-arnold.de">personal@service-arnold.de</a></p>
 
     <footer>
       <p><strong>Arnold Service GmbH – Robert Bosch Straße 59, 50769 Köln</strong></p>
