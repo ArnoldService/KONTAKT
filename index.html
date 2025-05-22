@@ -20,24 +20,37 @@
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .logo, .hero {
       text-align: center;
-      margin-bottom: 30px;
     }
-    .logo img, .hero img {
-      max-width: 300px;
+    .container ul {
+      display: inline-block;
+      text-align: left;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      max-width: 250px;
       height: auto;
     }
     h1 {
       color: #005288;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .hero-top img,
+    .hero-bottom img {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px auto 20px auto;
+      background: #fff;
+    }
+    .hero-top, .hero-bottom {
       text-align: center;
-    }
-    ul {
-      margin-top: 10px;
-    }
-    .contact-line {
-      margin-top: 10px;
+      margin: 10px 0;
     }
     .email {
       font-weight: bold;
@@ -47,7 +60,7 @@
       font-size: 0.9em;
       color: #666;
       text-align: center;
-      margin-top: 60px;
+      margin-top: 40px;
       padding-top: 20px;
       border-top: 1px solid #ccc;
     }
@@ -58,33 +71,19 @@
     a:hover {
       text-decoration: underline;
     }
-  
-    .hero-top, .hero-bottom {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .hero-top img, .hero-bottom img {
-      max-width: 250px; width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    </style>
-    
+  </style>
 </head>
 <body>
-<style> .container { text-align: center; } .container ul { display: inline-block; text-align: left; }</style>
   <div class="container">
     <div class="logo">
       <img src="logo-2.png" alt="Arnold Service Logo">
     </div>
-    
-<div class="hero-top">
-      <img src="recruitment_woman_klein.png" alt="Frau mit ARNOLD-Shirt">
-      
-    </div>
 
     <h1>Bewirb dich jetzt bei uns!</h1>
+    <div class="hero-top">
+      <img src="recruitment_woman_klein.png" alt="Frau mit ARNOLD-Shirt">
+    </div>
+
     <p>Wir freuen uns, dass du Teil unseres Teams werden möchtest!</p>
     <ul>
       <li>ein starkes, eingespieltes Team</li>
@@ -95,8 +94,11 @@
     <p>📞 <a href="tel:022197581888">0221 975 818 88</a></p>
     <p>📧 <a class="email" href="mailto:personal@service-arnold.de">personal@service-arnold.de</a></p>
 
-    <div class="hero-bottom"><img src="recruitment_man_freigestellt_klein_final.png" alt="Mann mit ARNOLD-Shirt" style="background:#fff;"></div>
-<footer>
+    <div class="hero-bottom">
+      <img src="recruitment_man_freigestellt_klein_final.png" alt="Mann mit ARNOLD-Shirt">
+    </div>
+
+    <footer>
       <p><strong>Arnold Service GmbH – Robert Bosch Straße 59, 50769 Köln</strong></p>
     </footer>
   </div>
