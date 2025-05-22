@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arnold Service GmbH – Kontakt</title>
   <style>
     body {
@@ -32,17 +32,9 @@
     h1 {
       color: #005288;
       text-align: center;
-      font-size: 1.8em;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    td {
-      padding: 10px;
-      vertical-align: top;
-      font-size: 1.2em;
+    ul {
+      margin-top: 10px;
     }
     .contact-line {
       margin-top: 10px;
@@ -59,7 +51,25 @@
       padding-top: 20px;
       border-top: 1px solid #ccc;
     }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = navigator.language.slice(0, 2);
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+      if (!document.querySelector('[data-lang="' + lang + '"]')) {
+        document.querySelector('[data-lang="de"]').style.display = 'block';
+      }
+    });
+  </script>
 </head>
 <body>
   <div class="container">
@@ -67,55 +77,99 @@
       <img src="logo-2.png" alt="Arnold Service Logo">
     </div>
 
-    <h1>Bewirb dich jetzt bei uns!</h1>
+    <div data-lang="de">
+      <h1>Bewirb dich jetzt bei uns!</h1>
+      <p>Wir freuen uns, dass du Teil unseres Teams werden möchtest!</p>
+      <ul>
+        <li>ein starkes, eingespieltes Team</li>
+        <li>faire Bedingungen und ehrliche Kommunikation</li>
+        <li>abwechslungsreiche Aufgaben im Bereich Gebäudedienstleistungen</li>
+      </ul>
+      <p><strong>Wir suchen Menschen, die mit anpacken und mit uns wachsen wollen.</strong></p>
+      <p>📞 <a href="tel:01703234040">0170 3234040</a> | <a href="tel:017611422708">0176 11422708</a> | <a href="tel:01492930302">0149 2930302</a></p>
+      <p>📧 <span class="email">personal@service-arnold.de</span></p>
+    </div>
 
-    <p>
-      Wir freuen uns, dass du Teil unseres Teams werden möchtest!<br>
-      Bei uns erwarten dich:
-    </p>
-    <ul>
-      <li>ein starkes, eingespieltes Team</li>
-      <li>faire Bedingungen und ehrliche Kommunikation</li>
-      <li>abwechslungsreiche Aufgaben im Bereich Gebäudedienstleistungen</li>
-    </ul>
-    <p>
-      Egal, ob du bereits Erfahrung mitbringst oder einfach motiviert bist –<br>
-      <strong>wir suchen Menschen, die mit anpacken und mit uns wachsen wollen.</strong>
-    </p>
+    <div data-lang="en">
+      <h1>Apply now!</h1>
+      <p>We're happy you're interested in joining our team!</p>
+      <ul>
+        <li>a strong, well-coordinated team</li>
+        <li>fair conditions and honest communication</li>
+        <li>diverse tasks in building services</li>
+      </ul>
+      <p><strong>We're looking for people who want to roll up their sleeves and grow with us.</strong></p>
+      <p>📞 <a href="tel:01703234040">0170 3234040</a> | <a href="tel:017611422708">0176 11422708</a> | <a href="tel:01492930302">0149 2930302</a></p>
+      <p>📧 <span class="email">personal@service-arnold.de</span></p>
+    </div>
 
-    <h2>Kontaktmöglichkeiten</h2>
-    <p>Ruf uns einfach an:</p>
-    <table>
-      <tr>
-        <td>🇩🇪</td>
-        <td>📞 0170 3234040</td>
-      </tr>
-      <tr>
-        <td>🇬🇧</td>
-        <td>📞 0176 11422708</td>
-      </tr>
-      <tr>
-        <td>🇷🇴</td>
-        <td>📞 0149 2930302</td>
-      </tr>
-    </table>
+    <div data-lang="ro">
+      <h1>Aplică acum!</h1>
+      <p>Ne bucurăm că vrei să faci parte din echipa noastră!</p>
+      <ul>
+        <li>o echipă puternică și bine coordonată</li>
+        <li>condiții corecte și comunicare deschisă</li>
+        <li>activități variate în domeniul serviciilor de clădiri</li>
+      </ul>
+      <p><strong>Căutăm persoane care vor să pună mâna la treabă și să crească alături de noi.</strong></p>
+      <p>📞 <a href="tel:01703234040">0170 3234040</a> | <a href="tel:017611422708">0176 11422708</a> | <a href="tel:01492930302">0149 2930302</a></p>
+      <p>📧 <span class="email">personal@service-arnold.de</span></p>
+    </div>
 
-    <p class="contact-line">
-      💬 Gerne kannst du uns auch eine Sprachnachricht oder SMS schicken.<br>
-      Wir melden uns so schnell wie möglich bei dir zurück.
-    </p>
+    <div data-lang="pl">
+      <h1>Dołącz do nas!</h1>
+      <p>Cieszymy się, że chcesz dołączyć do naszego zespołu!</p>
+      <ul>
+        <li>zgrany i silny zespół</li>
+        <li>uczciwe warunki i otwarta komunikacja</li>
+        <li>różnorodne zadania w usługach budowlanych</li>
+      </ul>
+      <p><strong>Szukamy osób, które chcą działać i rozwijać się razem z nami.</strong></p>
+      <p>📞 <a href="tel:01703234040">0170 3234040</a> | <a href="tel:017611422708">0176 11422708</a> | <a href="tel:01492930302">0149 2930302</a></p>
+      <p>📧 <span class="email">personal@service-arnold.de</span></p>
+    </div>
 
-    <h2>Oder schreib uns eine Nachricht</h2>
-    <p>
-      📧 <span class="email">personal@service-arnold.de</span><br>
-      🕐 Wir antworten in der Regel innerhalb von 1–2 Werktagen.
-    </p>
+    <div data-lang="ru">
+      <h1>Присоединяйтесь к нам!</h1>
+      <p>Мы рады, что вы заинтересовались нашей командой!</p>
+      <ul>
+        <li>сильная и слаженная команда</li>
+        <li>честные условия и открытое общение</li>
+        <li>разнообразные задачи в сфере обслуживания зданий</li>
+      </ul>
+      <p><strong>Мы ищем людей, готовых работать и развиваться вместе с нами.</strong></p>
+      <p>📞 <a href="tel:01703234040">0170 3234040</a> | <a href="tel:017611422708">0176 11422708</a> | <a href="tel:01492930302">0149 2930302</a></p>
+      <p>📧 <span class="email">personal@service-arnold.de</span></p>
+    </div>
+
+    <div data-lang="it">
+      <h1>Candidati ora!</h1>
+      <p>Siamo felici che tu voglia far parte del nostro team!</p>
+      <ul>
+        <li>un team forte e ben coordinato</li>
+        <li>condizioni e comunicazione trasparente</li>
+        <li>compiti vari nel settore dei servizi per edifici</li>
+      </ul>
+      <p><strong>Cerchiamo persone pronte a dare una mano e crescere con noi.</strong></p>
+      <p>📞 <a href="tel:01703234040">0170 3234040</a> | <a href="tel:017611422708">0176 11422708</a> | <a href="tel:01492930302">0149 2930302</a></p>
+      <p>📧 <span class="email">personal@service-arnold.de</span></p>
+    </div>
+
+    <div data-lang="es">
+      <h1>¡Aplica ahora!</h1>
+      <p>¡Nos alegra que quieras formar parte de nuestro equipo!</p>
+      <ul>
+        <li>un equipo fuerte y bien coordinado</li>
+        <li>condiciones justas y comunicación abierta</li>
+        <li>tareas variadas en servicios para edificios</li>
+      </ul>
+      <p><strong>Buscamos personas que quieran trabajar y crecer con nosotros.</strong></p>
+      <p>📞 <a href="tel:01703234040">0170 3234040</a> | <a href="tel:017611422708">0176 11422708</a> | <a href="tel:01492930302">0149 2930302</a></p>
+      <p>📧 <span class="email">personal@service-arnold.de</span></p>
+    </div>
 
     <footer>
-      <p><strong>Impressum:</strong><br>
-      Arnold Service GmbH<br>
-      Robert Bosch Straße 59<br>
-      50769 Köln</p>
+      <p><strong>Arnold Service GmbH – Robert Bosch Straße 59, 50769 Köln</strong></p>
     </footer>
   </div>
 </body>
