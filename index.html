@@ -72,6 +72,18 @@
       text-decoration: underline;
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = navigator.language.slice(0, 2);
+      const sections = document.querySelectorAll("[data-lang]");
+      sections.forEach(sec => {
+        sec.style.display = sec.getAttribute("data-lang") === lang ? "block" : "none";
+      });
+      if (![...sections].some(sec => sec.style.display === "block")) {
+        document.querySelector('[data-lang="de"]').style.display = "block";
+      }
+    });
+  </script>
 </head>
 <body>
   <div class="container">
@@ -79,21 +91,20 @@
       <img src="logo-2.png" alt="Arnold Service Logo">
     </div>
 
-    <h1>Bewirb dich jetzt bei uns!</h1>
-    <div class="hero-top">
-      <img src="recruitment_woman_klein.png" alt="Frau mit ARNOLD-Shirt">
+    <div data-lang="de">
+      <h1>Bewirb dich jetzt bei uns!</h1>
+      <div class="hero-top"><img src="recruitment_woman_klein.png" alt="Frau mit ARNOLD-Shirt"></div>
+      <p>Wir freuen uns, dass du Teil unseres Teams werden möchtest!</p>
+      <p style="margin-bottom: 0.2em;">Bei uns erwarten dich:</p>
+      <ul style="margin-top: 0.2em;">
+        <li>ein starkes, eingespieltes Team</li>
+        <li>faire Bedingungen und ehrliche Kommunikation</li>
+        <li>abwechslungsreiche Aufgaben im Bereich Gebäudedienstleistungen</li>
+      </ul>
+      <p><strong>Wir suchen Menschen, die mit anpacken und mit uns wachsen wollen.</strong></p>
+      <p>📞 <a href="tel:022197581888">0221 975 818 88</a></p>
+      <p>📧 <a class="email" href="mailto:personal@service-arnold.de">personal@service-arnold.de</a></p>
     </div>
-
-    <p>Wir freuen uns, dass du Teil unseres Teams werden möchtest!</p>
-    <p style="margin-bottom: 0.2em;">Bei uns erwarten dich:</p>
-<ul style="margin-top: 0.2em;">
-      <li>ein starkes, eingespieltes Team</li>
-      <li>faire Bedingungen und ehrliche Kommunikation</li>
-      <li>abwechslungsreiche Aufgaben im Bereich Gebäudedienstleistungen</li>
-    </ul>
-    <p><strong>Wir suchen Menschen, die mit anpacken und mit uns wachsen wollen.</strong></p>
-    <p>📞 <a href="tel:022197581888">0221 975 818 88</a></p>
-    <p>📧 <a class="email" href="mailto:personal@service-arnold.de">personal@service-arnold.de</a></p>
 
     <div class="hero-bottom">
       <img src="recruitment_man_freigestellt_klein_final.png" alt="Mann mit ARNOLD-Shirt">
